@@ -1,0 +1,642 @@
+html{
+    height:100%;
+}
+body{
+    height:100%;
+    background: url("../images/bodybg.png");
+}
+/*固定定位导航栏样式*/
+.fixednav{
+    position: fixed;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    background-color: #E0E1E1;
+    z-index: 10;
+    transition: all 1s;
+    opacity: 0.9;
+    line-height: 80px;
+}
+/*固定定位导航栏版心样式*/
+.fixednav .w{
+    /*background-color: black;*/
+    height: 100%;
+    transition: all 1s;
+    color: #20C2D2;
+    font-weight: 700;
+}
+/*导航栏中的logo样式*/
+.fixednav .w .logo{
+    float: left;
+    height: 100%;
+    width: 200px;
+    font-size: 30px;
+    /*background-color: #c5e6ea;*/
+    text-align: center;
+    transition: all 1s;
+    line-height: 75px;
+}
+.fixednav .w .logo a{
+    color: #20C2D2;
+    transition: color 1s;
+}
+.fixednav .w .logo a:hover{
+    color: black;
+}
+/*导航栏ul*/
+.fixednav .w ul{
+    height: 100%;
+    float: right;
+    color: #20C2D2;
+    font-weight: 700;
+}
+/*导航栏li*/
+.fixednav .w ul li{
+    float: left;
+    padding-left: 35px;
+    padding-right: 35px;
+    transition: background-color 1s;
+}
+.fixednav .w ul li:hover{
+    background-color: #20C2D2;
+}
+.fixednav .w ul li:hover > a{
+    color: #E0E1E1;
+}
+.fixednav .w ul li a {
+    color: #20C2D2;
+    transition: font-size 1s , color 1s;
+}
+.fixednav .w ul li a:hover{
+    font-size: 20px;
+}
+.box{
+    height: 100%;
+    position: relative;
+    transition: all 1s;
+}
+/*4个模块公共样式*/
+.dv{
+    height: 100%;
+}
+/*模块一样式*/
+.div1{
+    background-color: rgba(0,0,0,0.2);
+}
+/*模块二样式*/
+.div2{
+    background-color: rgba(0,0,0,0.4);
+}
+/*模块三样式*/
+.div3{
+    background-color: rgba(0,0,0,0.6);
+
+}
+/*模块四样式*/
+.div4{
+    background-color: rgba(0,0,0,0.5);
+
+}
+/*列表按钮ul样式*/
+#uu{
+    width: 40px;
+    height: 130px;
+    background-color: #E0E1E1;
+    opacity: 0.2;
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    margin-top: -65px;
+    border-radius: 20px;
+    transition: all 0.5s;
+    z-index: 8;
+}
+#uu:hover{
+    opacity: 0.7;
+}
+/*列表按钮li样式*/
+.uu li{
+    width: 20px;
+    height: 20px;
+    margin-left:9px;
+    margin-top: 9px;
+    border-radius: 10px;
+    background-color: #A8A9A9;
+    cursor: pointer;
+    transition: all 1s;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    overflow: hidden;
+}
+/*按钮li内部span样式*/
+.uu li span{
+    display: block;
+    width: 20px;
+    height: 0;
+    border-radius: 10px;
+    background-color: white;
+    transition: all 1s;
+}
+/*选中按钮样式*/
+.uu li.current{
+    background-color: white;
+}
+
+/*模块一样式*/
+.div1 .poster{
+    height: 100%;
+}
+/*海报ul*/
+.div1 .poster ul{
+    height: 100%;
+    position: relative;
+    width: 1563px;
+    margin: 0 auto;
+}
+/*海报li*/
+.div1 .poster ul li{
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    transition: z-index 1s,opacity 1s;
+}
+/*海报遮挡层*/
+.div1 .poster ul li span{
+    height: 100%;
+    width: 1563px;
+    background-color: rgba(0,0,0,.3);
+    position: absolute;
+}
+/*海报遮挡层里边的p标签*/
+.div1 .poster ul li span p{
+    display: inline-block;
+    color: white;
+    font-size: 60px;
+    font-weight: 800;
+    margin-top: 350px;
+    /*margin-left: 270px;*/
+    margin-left: -300px;
+    cursor: pointer;
+    transition: color 0.5s,font-size 0.5s,margin-left 0.5s;
+}
+.div1 .poster ul li span p:hover{
+    color: #20C2D2;
+    font-size: 62px;
+}
+/*海报img*/
+.div1 .poster ul li img{
+    width: 1563px;
+}
+/*海报按钮ol*/
+.div1 .poster ol{
+    height: 40px;
+    width: 150px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-left: -75px;
+    z-index: 8;
+}
+/*海报按钮li*/
+.div1 .poster ol li{
+    float: left;
+    color: #333333;
+    width: 10px;
+    height: 10px;
+    background-color: #20C2D2;
+    text-align: center;
+    margin-left: 22px;
+    cursor: pointer;
+    transform-origin: 50% 50%;
+    transition: transform 0.5s;
+}
+.div1 .poster ol li:hover{
+    transform: rotate(45deg);
+}
+/*内容盒子2---------------------------------------------------------------------------------------------------------------------------*/
+.div2 .w{
+    height: 100%;
+    /*background-color: #23394D;*/
+}
+/*游戏大盒子*/
+.div2 .w .games{
+    /*background-color: salmon;*/
+    height: 560px;
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 120px;
+}
+/*游戏列表盒子*/
+.gamelist{
+    float: left;
+    margin-left: -900px;
+    transition: margin-left 2s;
+}
+/*游戏列表ul*/
+.gamelist ul{
+
+}
+/*游戏列表li*/
+.gamelist ul li{
+    width: 670px;
+    height: 69px;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    cursor: pointer;
+}
+.gamelist ul li.games1{
+    transition: margin-left 3s,opacity 2.5s,background-color 0.5s;
+}
+.gamelist ul li.games2{
+    transition: margin-left 2.5s,opacity 2s,background-color 0.5s;
+}
+.gamelist ul li.games3{
+    transition: margin-left 2s,opacity 1.5s,background-color 0.5s;
+}
+.gamelist ul li.games4{
+    transition: margin-left 1.5s,opacity 1s,background-color 0.5s;
+}
+.gamelist ul li.games5{
+    transition: margin-left 1s,opacity 0.5s,background-color 0.5s;
+}
+.gamelist ul li.games6{
+    transition: margin-left 0.5s,opacity 0.3s,background-color 0.5s;
+}
+.gamelist ul li.games7{
+    transition: margin-left 0.1s,opacity 0.1s;
+}
+.gamelist ul li img{
+    position: absolute;
+}
+/*more*/
+.gamelist ul li .morebox{
+    width: 184px;
+    height: 69px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+.morebox .moreboxchi{
+    width: 184px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    z-index: 1;
+    transition:bottom 0.5s;
+    text-align: center;
+    color: #cecece;
+}
+/*游戏名称标题*/
+.gamename{
+    color: white;
+    position: absolute;
+    left: 200px;
+    top: 5px;
+}
+/*游戏类型*/
+.gametype{
+    color: white;
+    position: absolute;
+    left: 200px;
+    bottom: 5px;
+    font-size: 12px;
+}
+/*游戏折扣*/
+.gamesale{
+    background-color: #4c6b22;
+    color: #a4d007;
+    font-size: 14px;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: absolute;
+    right: 110px;
+    top: 26px;
+}
+/*游戏价格盒子*/
+.price{
+    color: white;
+    position: absolute;
+    right: 16px;
+    top: 15px;
+}
+/*原价*/
+.price .oldprice{
+    display: block;
+    font-size: 11px;
+}
+/*现价*/
+.price .newprice{
+    font-size: 13px;
+}
+.s{
+    float: right;
+    width: 22px;
+    height: 69px;
+    background-color: salmon;
+    margin-right: -22px;
+    background-color: rgba(224, 225, 225, 0);
+    transition: background-color 0.5s;
+}
+/*.gamelist ul li:hover > .s{*/
+    /*background-color: rgba(224, 225, 225, 0.8);*/
+/*}*/
+/*游戏内容盒子*/
+.gamesuggest{
+    float: right;
+    width: 288px;
+    height: 533px;
+    background-color: rgba(224, 225, 225, 0.8);
+    margin-top: 10px;
+    margin-right: -570px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    transition: margin-right 1s;
+}
+/*游戏名称*/
+.gamesuggest .contentname{
+    font-size: 21px;
+    color: #1f2022;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+/*游戏测评*/
+.gamesuggest .contenteva{
+    height: 42px;
+    background-color: rgba( 38, 54, 69, 0.6);
+    border-radius: 2px;
+    margin-top: 15px;
+}
+.gamesuggest .contenteva>p{
+    font-size: 12px;
+    color: #c6d4df;
+    line-height: 20px;
+    margin-left: 8px;
+}
+.gamesuggest .contenteva p>a {
+    color: #66C0F4;
+}
+/*游戏标签*/
+.gamesuggest ul.contenttype{
+    margin-top: 15px;
+    color: #c6d4df;
+
+}
+.gamesuggest ul.contenttype li{
+    float: left;
+    margin-right: 5px;
+    background-color: rgba( 38, 54, 69, 0.6);
+    font-size: 11px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 2px;
+}
+/*游戏大图*/
+.gamesuggest .gameimgbox{
+    margin-top: 20px;
+    overflow: hidden;
+    height: 161px;
+}
+.gamesuggest .gameimgbox img{
+    transition:width 0.5s,margin-left 0.5s,margin-top 0.5s;
+}
+.gamesuggest .gameimgbox img:hover{
+    width: 110%;
+    margin-left: -10px;
+    margin-top: -10px;
+}
+/*内容盒子3---------------------------------------------------------------------------------------------------------------------------*/
+.div3 .w {
+    /*background-color: skyblue;*/
+    padding-top: 120px;
+}
+.div3 .w .offerbox{
+    width: 940px;
+    height: 390px;
+    /*background-color: slateblue;*/
+    margin: 0 auto;
+}
+.offerbox .specialoffers{
+    float: left;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 10px;
+    font-size: 17px;
+    letter-spacing: 2px;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: normal;
+    padding-top: 2px;
+}
+.offerbox .browseall{
+    display: block;
+    padding-left: 5px;
+    padding-right: 5px;
+    float: right;
+    line-height: 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 12px;
+    color: white;
+    margin-top: 6px;
+}
+.offerbox .offerbuttom{
+    /*background-color: sandybrown;*/
+    height: 390px;
+    margin-top: 10px;
+}
+.offerbuttom .offergame1{
+    float: left;
+    width: 306px;
+    height: 390px;
+    background: url("../images/offergame2.jpg") no-repeat;
+    position: relative;
+}
+.offergame1 .offergame1con{
+    width: 306px;
+    height: 100px;
+    background-color: #1F6F94;
+    position: absolute;
+    bottom: 0;
+    transition: height 0.5s;
+}
+.offergame1 .offergame1con:hover{
+    height: 150px;
+}
+.offerbuttom .offergame2{
+    float: left;
+    margin-left: 11px;
+    width: 306px;
+    height: 390px;
+    background: url("../images/naruto.jpg") no-repeat;
+    position: relative;
+}
+.offergame2 .offergame2con{
+    width: 306px;
+    height: 100px;
+    background-color: #1F6F94;
+    position: absolute;
+    bottom: 0;
+    transition: height 0.5s;
+}
+.offergame2 .offergame2con:hover{
+    height: 150px;
+}
+.offerbuttom .offergames{
+    float: right;
+    width: 306px;
+    height: 390px;
+    /*background: silver;*/
+}
+.offergames .offergame3{
+    width: 306px;
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+}
+.offergame3 .offergame3con{
+    width: 306px;
+    height: 55px;
+    background-color: #AEDBF4;
+    position: absolute;
+    bottom: 0;
+}
+.offergames .offergame4{
+    width: 306px;
+    height: 195px;
+    margin-top: 15px;
+    position: relative;
+    overflow: hidden;
+}
+.offergame4 .offergame4con{
+    width: 306px;
+    height: 55px;
+    background-color: #1F6F94;
+    position: absolute;
+    bottom: 0;
+}
+.offerboxbuttom{
+    height: 100px;
+    margin-top: 100px;
+}
+.offerboxbuttom ul{
+    width: 940px;
+    margin: 0 auto;
+}
+.offerboxbuttom ul li{
+    width: 226px;
+    height: 58px;
+    background-color: slategray;
+    float: left;
+    margin-left: 6px;
+    text-align: center;
+    line-height: 58px;
+    background-color: #1B6489;
+    color: #66c0f4;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: color 0.5s,background-color 0.5s;
+}
+.offerboxbuttom ul li:hover{
+    color: white;
+    background-color: #1b83a9;
+}
+/*------------------------------------------------------------------------------------*/
+.div4 .w{
+    position: relative;
+    height: 100%;
+}
+.div4{
+    position: relative;
+}
+.buttonnavv{
+    height: 200px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    color: white;
+}
+.buttonnavv ul{
+    float: left;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+.buttonnavv ul li{
+    color: white;
+    width: 100px;
+    height: 16px;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 80px;
+    cursor: pointer;
+    transition: color 0.5s;
+    position: relative;
+    overflow: hidden;
+}
+.buttonnavv ul li>div{
+    width: 100px;
+    height: 16px;
+    background-color: #20C2D2;
+    position: absolute;
+    left: -100px;
+    transition: left 0.5s;
+}
+.buttonnavv ul li>a{
+    position: absolute;
+}
+.buttonnavv ul li:hover{
+    color: #20C2D2;
+}
+.buttonnavv ul li:hover>div{
+    left: 0px;
+}
+.buttonnavv .searchbox{
+    height: 30px;
+    position: absolute;
+    top: 110px;
+    right: 80px;
+}
+.buttonnavv .searchbox .searchtxt{
+    height: 30px;
+    padding-left: 10px;
+    background-color: #8a8a8a;
+    border-radius:10px 0 0 10px;
+    font-size: 15px;
+    color: white;
+
+}
+.buttonnavv .searchbox .searchbtn{
+    width: 50px;
+    height: 30px;
+    font-size: 13px;
+    background-color: #20C2D2;
+    color: white;
+    border-radius: 0 10px 10px 0;
+    margin-left: -5px;
+    transition: font-size 0.5s;
+}
+.buttonnavv .searchbox .searchbtn:hover{
+    font-size: 18px;
+}
+.chunjieoffer{
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 38px;
+    right: 100px;
+}
+.offertime{
+    font-size: 10px;
+}
+.offergame3>img{
+    transition: width 0.5s,margin-left 0.5s;
+}
+.offergame4>img{
+    transition: width 0.5s,margin-left 0.5s;
+}
